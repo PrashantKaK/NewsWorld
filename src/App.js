@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from "./logo.svg";
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import FetchApi from "./Components/FetchApi";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+
+        <Routes>
+          <Route path="/general" element={<FetchApi category="general" />} />
+
+          <Route path="business" element={<FetchApi category="business" />} />
+          <Route
+            path="entertainment"
+            element={<FetchApi category="entertainment" />}
+          />
+          <Route path="health" element={<FetchApi category="health" />} />
+          <Route path="science" element={<FetchApi category="science" />} />
+          <Route path="sports" element={<FetchApi category="sports" />} />
+          <Route
+            path="technology"
+            element={<FetchApi category="technology" />}
+          />
+        </Routes>
+
+        <Footer />
+      </Router>
+    </>
   );
 }
 
