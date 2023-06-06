@@ -12,20 +12,46 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/general" element={<FetchApi category="general" />} />
-
-          <Route path="business" element={<FetchApi category="business" />} />
           <Route
+            exact
+            path="/"
+            element={<FetchApi category="general" />}
+          ></Route>
+          <Route
+            // exact
+            path="/general"
+            element={<FetchApi key="general" category="general" />}
+          ></Route>
+          <Route
+            // exact
+            path="business"
+            element={<FetchApi key="business" category="business" />}
+          ></Route>
+          <Route
+            // exact
             path="entertainment"
-            element={<FetchApi category="entertainment" />}
-          />
-          <Route path="health" element={<FetchApi category="health" />} />
-          <Route path="science" element={<FetchApi category="science" />} />
-          <Route path="sports" element={<FetchApi category="sports" />} />
+            element={<FetchApi key="entertainment" category="entertainment" />}
+          ></Route>
           <Route
-            path="technology"
-            element={<FetchApi category="technology" />}
+            // exact
+            path="health"
+            element={<FetchApi key="health" category="health" />}
+          ></Route>
+          <Route
+            // exact
+            path="science"
+            element={<FetchApi key="science" category="science" />}
+          ></Route>
+          <Route
+            // exact
+            path="sports"
+            element={<FetchApi key="sports" category="sports" />}
           />
+          <Route
+            // exact
+            path="technology"
+            element={<FetchApi key="technology" category="technology" />}
+          ></Route>
         </Routes>
 
         <Footer />

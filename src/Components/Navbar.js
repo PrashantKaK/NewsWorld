@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar  navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <Link className="navbar-brand" to="#">
             NewsWorld
@@ -22,9 +22,8 @@ export default function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/general">
+                <Link className="nav-link " to="/general">
                   General
                 </Link>
               </li>
