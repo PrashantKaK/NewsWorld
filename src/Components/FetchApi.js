@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Newsfeed from "./Newsfeed";
 
 const FetchApi = (props) => {
-  const apiKey = "791657c2fa104527bb568055842e7e6a";
+  const apiKey = "";
   const [news, setData] = useState([]);
 
   const fetchData = async () => {
